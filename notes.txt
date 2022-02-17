@@ -1,0 +1,21 @@
+ng serve 
+ng g c course
+ng g s email
+ng g p title-case
+ng g c favourite
+
+npm install bootstrap@3.3.7 --save
+Auto Import Plugin
+
+
+# Shadow DOM: Allows us to apply scoped styles to elements without it bleeding to the outer world.
+# Directives (Structural) : Modify the structure of the DOM
+# Directives (Attributes) : Modify the Attributes of DOM elements
+
+(li>a)*2
+
+ng g d input-format
+
+div.form-group>label>[for='comment']+textarea[id='comment'].form-control
+label+input[type='text'].form-control
+div.checkbox>label>input[type='checkbox']
