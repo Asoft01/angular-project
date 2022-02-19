@@ -19,3 +19,8 @@ ng g d input-format
 div.form-group>label>[for='comment']+textarea[id='comment'].form-control
 label+input[type='text'].form-control
 div.checkbox>label>input[type='checkbox']
+div.form-group>label[for='contactMethod']+select[id='contactMethod'].form-control
+div.radio>label>input[type='radio'][name='contactMethod']
+div.form-group>label[for='name']+input[type='text'][id='name'].form-control
+div.form-group>label[for='category']+select[id='category'].form-control
+div.checkbox>label[for='moneyBackGuarantee']>input[type='checkbox'][id='moneyBackGuarantee'].form-control

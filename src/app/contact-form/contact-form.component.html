@@ -23,6 +23,7 @@
                 <div *ngIf="firstName.errors.required">
                     First Name is Required
                 </div>
+                
                 <div 
                 *ngIf="firstName.errors.minlength">
                     First name should be minimum of {{ firstName.errors.minlength.requiredLength }} characters
@@ -35,15 +36,46 @@
     </div>
     <div class="form-group">
         <label for="comment">Comment</label>
-        <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
+        <textarea id="comment" cols="30" rows="10" class="form-control" ngModel name="comment"></textarea>
     </div>
     <div class="checkbox">
         <label>
             <input type="checkbox" ngModel name="isSubscribed">Subscribing to mailing lis
         </label>
     </div>
+    <div class="form-group">
+        <label for="contactMethod">Contact Method</label>
+        <select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name }}</option>
+            <!-- <option *ngFor ="let method of contactMethods" [ngValue]="method">{{ method.name }}</option> -->
+        </select>
+    </div>
+
+    <!-- <div class="radio">
+        <label for="">
+            <input ngModel type="radio" name="contactMethod" value="1">
+            Email
+        </label>
+    </div>
+
+    <div class="radio">
+        <label for="">
+            <input ngModel type="radio" name="contactMethod" value="2">
+            Phone
+        </label>
+    </div> -->
+
+    <div *ngFor = "let method of contactMethods" class="radio" >
+        <label for="">
+            <input ngModel type="radio" name="contactMethod" [value]="method.id">
+            {{ method.name }}
+        </label>
+    </div>
+    
     <p>
         {{ f.value | json }}
     </p>
+
     <button class="btn btn-primary" [disabled] = "!f.valid">Submit</button>
 </form>
