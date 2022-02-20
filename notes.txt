@@ -24,6 +24,8 @@ div.radio>label>input[type='radio'][name='contactMethod']
 div.form-group>label[for='name']+input[type='text'][id='name'].form-control
 div.form-group>label[for='category']+select[id='category'].form-control
 div.checkbox>label[for='moneyBackGuarantee']>input[type='checkbox'][id='moneyBackGuarantee'].form-control
+(div.form-group>label+input[type='password'].form-control)*3+button.btn.btn-primary
+
 
 ###### In angular.io documentation, search for validatorfn, asyncvalidationerrors
 

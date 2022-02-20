@@ -13,4 +13,5 @@ export class LikeComponent {
     this.likesCount += (this.isActive) ? - 1 : 1;
     this.isActive = !this.isActive;
   }
+
 }

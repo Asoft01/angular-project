@@ -15,15 +15,27 @@ export class SignupFormComponent {
     //   UsernameValidators.cannotContainSpace
     // ]),
 
-    username : new FormControl('', 
-    Validators.required, 
-    UsernameValidators.shouldBeUnique),
-    password: new FormControl('', Validators.required)
+    //////////////////////////////////////////////////////////////////////
+
+    // username : new FormControl('', 
+    // Validators.required, 
+    // UsernameValidators.shouldBeUnique),
+    // password: new FormControl('', Validators.required)
+    /////////////////////////////////////////////////////////////////////
+
+    account : new FormGroup({
+      username : new FormControl(''),
+      password: new FormControl('')
+    })
   });
 
+  // get username(){
+  //   return this.form.get('username');
+  // }
+
   get username(){
-    return this.form.get('username');
-  }
+    return this.form.get('account.username');
+  };
 
   login(){
       this.form.setErrors({
