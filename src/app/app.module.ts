@@ -1,3 +1,4 @@
+import { PostService } from './services/post.service';
 import { HttpClientModule } from '@angular/common/http';
 // import { HttpModule } from '@angular/common/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
@@ -59,7 +60,8 @@ import { PostsComponent } from './posts/posts.component';
   ],
   providers: [
     CoursesService, 
-    AuthorsService
+    AuthorsService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
