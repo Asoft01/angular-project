@@ -30,6 +30,7 @@ export class PostsComponent implements OnInit{
       .subscribe(
         response => {
         // console.log(response);
+        // This is for post 
         this.posts = response;
         // this.posts = response.json();
       }, 
