@@ -32,3 +32,6 @@ div.checkbox>label[for='moneyBackGuarantee']>input[type='checkbox'][id='moneyBac
 cd src/app
 mkdir services
 mv post.service.* services
+
+
+To jump to methods; press shift + control + O
