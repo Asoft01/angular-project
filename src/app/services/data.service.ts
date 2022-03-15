@@ -39,7 +39,7 @@ export class DataService {
 
   delete(id){
     return Observable.throw(new AppError());
-    
+    // To catch the errors
     //  return this.http.delete(this.url + '/' +id) 
     //  .map(response => response.json())
     // .catch(this.handleError);

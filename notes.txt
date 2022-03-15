@@ -35,3 +35,5 @@ mv post.service.* services
 
 
 To jump to methods; press shift + control + O
+
+npm install -g angular-cli-ghpages
