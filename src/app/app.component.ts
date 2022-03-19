@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
 import { FavouriteChangedEventArgs } from './favourite/favourite.component';
-
+import { AngularFireDatabase } from 'angularfire2/database';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  coursess: any[];
+  
+  constructor(db: AngularFireDatabase){
+    db.list('/courses')
+      .subscribe(coursess => {
+        this.coursess = coursess;
+        console.log(this.coursess);
+      });
+  }
+
   titles = 'hello-angular';
   title: string;
 
@@ -21,7 +32,7 @@ export class AppComponent {
 
   onFavouriteChanged(eventArgs: FavouriteChangedEventArgs ){
     console.log("Favourite Changed: ", eventArgs);
-  }
+  }  
 
   tweet = {
     body: '...',

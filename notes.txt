@@ -37,3 +37,8 @@ mv post.service.* services
 To jump to methods; press shift + control + O
 
 npm install -g angular-cli-ghpages
+ng build --prod --base-href
+console.firebase.google.com
+npm i -g firebase-tools
+firbase login
+firebase init
